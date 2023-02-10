@@ -115,5 +115,24 @@ namespace _09._02._23_HW
                 }
             return true;
         }
+
+        public int this[int r, int c]
+        {
+            get
+            {
+                if (r >= mat.GetLength(0) || r < 0 || c >= mat.GetLength(1) || c < 0)
+                    throw new Exception("Некорректный индекс");
+                else
+                    return mat[r, c];
+            }
+            set
+            {
+                if (r >= mat.GetLength(0) || r < 0 || c >= mat.GetLength(1) || c < 0)
+                    throw new Exception("Некорректный индекс");
+                else
+                    mat[r, c] = value;
+            }
+        }
+
     }
 }
